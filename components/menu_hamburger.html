@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Style of hamburger_menu -->
+    <link href="../css/hamburger-menu.css" rel="stylesheet">
+    <link rel="stylesheet" href="../components/menu.css">
+</head>
+<body>
+    <div class="container">
+        <header id="inicio">
+            <div class="hamburger hamburger--spin">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <h1>Fernan<span class="orange">Pop</span></h1>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a class="link" href="../pages/inicio.html">Inicio</a></li>
+                    <li><a class="link" href="../pages/editarPerfil.html">Editar Perfíl</a></li>
+                    <li><a class="link" href="">Subir Producto</a></li>
+                    <li><a class="link" href="">Ver mis tratos</a></li>
+                    <li><a class="link" href="">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+    <script>
+        let hamburger = document.querySelector(".hamburger--spin");
+
+        let menu = document.querySelector(".navbar-menu");
+
+
+        console.log(hamburger)
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("is-active");
+            menu.classList.toggle("open");
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FernanPop | Perfíl</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/edit.css">
+    <!--fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Raleway:wght@700;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--fontawesome icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+    <!-- Style of hamburger_menu -->
+    <link href="../css/hamburger-menu.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header id="inicio">
+            <div class="hamburger hamburger--spin">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner">
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <h1>Fernan<span class="orange">Pop</span></h1>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a class="link" href="../pages/inicio.html">Inicio</a></li>
+                    <li><a class="link" href="../pages/editarPerfil.html">Editar Perfíl</a></li>
+                    <li><a class="link" href="../pages/subirProducto.html">Subir Producto</a></li>
+                    <li><a class="link" href="./tratos.html">Ver mis tratos</a></li>
+                    <li><a class="link" href="">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Hero -->
+        <div class="hero">
+            <!-- Card Profile -->
+            <div class="hero-card-profile">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="waves-container">
+                            <div class="wave wave1"></div>
+                            <div class="wave wave2"></div>
+                            <div class="wave wave3"></div>
+                        </div>
+                        <img class="img-profile" src="../assets/icons/user.svg" alt="img_profile">
+                        <div class="load-avatar-profile">
+                            <label for="avatar" class="label-avatar"></label>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h2>Flavio Oria</h2>
+                        <div class="profile_ranking">
+                            <p class="ranking"></p>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                        </div>
+                        <p class="member">Miembro desde el 21/05/2021</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Edit Profile -->
+            <div class="hero-edit-profile">
+                <h3 class="edit-title">Tus Datos</h3>
+                <form action="" class="form" enctype="multipart/form-data" method="get">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nombre</label>
+                        <input id="name" class="form-input" type="text" value="Flavio Cesar" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lastname">Apellido</label>
+                        <input id="lastname" class="form-input" type="text" value="Oria Pinto" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Correo Electronico</label>
+                        <input id="email" class="form-input" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Móvil</label>
+                        <input id="phone" class="form-input" type="tel" pattern="[0-9]{9}" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="age">Edad</label>
+                        <input id="age" class="form-input" type="text" pattern="[0-9]{2}" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="pass">Contraseña</label>
+                        <input id="pass" class="form-input" type="text" />
+                    </div>
+                    <input type="hidden" class="imgSrc" name="imgSrc" value="">
+                    <input type="hidden" class="extImg" name="extImg" value="">
+                    <input type="file" id="avatar" name="avatar" accept=".png, .jpg, .jpeg">
+                    <button class="btn-delete" name="acccion" value="borrar">Borrar Cuenta</button>
+                    <button class="btn-save" name="accion" value="guardar">Guardar Datos</button>
+                </form>
+                <span class="save-success">Datos guardados correctamente</span>
+                <p class="alert-failed">No se pudo guardar los datos, debes de llenar los campos correctamente.</p>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p class="footer-rigth">® Derechos Reservados</p>
+            <a class="footer-designed" href="">Designed by @flaviooria</a>
+            <div class="about-media">
+                <ul>
+                    <li><a href="" title="facebook/fernanpop.com"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a class="inicio" href="#inicio" title="Inicio"><i class="fas fa-arrow-circle-up"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- cdn de jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+        integrity="sha512-qzrZqY/kMVCEYeu/gCm8U2800Wz++LTGK4pitW/iswpCbjwxhsmUwleL1YXaHImptCHG0vJwU7Ly7ROw3ZQoww=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="../js/editProfile.js"></script>
+    <script>
+        //Esta es la media que tiene el usuario
+        const rating = 1.8
+        // total number of stars
+        const starTotal = 5;
+
+
+        const starPercentage = (rating / starTotal) * 100;
+        console.log(starPercentage);
+        const starPercentageRounded = `${(Math.floor(starPercentage / 10) * 10)}%`;
+        console.log(starPercentageRounded);
+        document.querySelector(".profile_ranking .ranking").innerHTML = `${rating} de valoración`;
+        console.log(`${rating}`);
+
+        document.querySelector(`.profile_ranking .stars-inner`).style.width = starPercentageRounded;
+    </script>
+</body>
+
+</html>

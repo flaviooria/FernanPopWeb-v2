@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="chats">
+        <input type="radio" id="tab1" name="tab" checked>
+        <label for="tab1"><i class="fas fa-envelope-open"></i> Recibidos</label>
+        <input type="radio" id="tab2" name="tab">
+        <label for="tab2"><i class="fas fa-paper-plane"></i> Enviados</label>
+        <div class="line"></div>
+        <div class="content-chats">
+            <div class="content" id="received">
+                <form action="" class="form">
+                    <p class="user">Enviado por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Enviado por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Enviado por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Enviado por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Enviado por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+            </div>
+            <div class="content" id="sends">
+                <form action="" class="form">
+                    <p class="user">Recibido por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Recibido por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Recibido por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Recibido por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+                <form action="" class="form">
+                    <p class="user">Recibido por: Flavio Oria Pinto</p>
+                    <p class="subject">Asunto: MacBook Pro 13</p>
+                    <input type="hidden" name="idProduct" value="">
+                    <button type="button">Chat</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        let chat = document.querySelector(".chats");
+        let button = document.querySelectorAll(".content .form button");
+
+        button.forEach(item => {
+            item.addEventListener("click", () => {
+                let label = document.querySelectorAll(".chats label");
+                console.log(label);
+                label.forEach(item => item.classList.toggle("left"));
+
+                let line = document.querySelector(".line");
+                line.style.left = "-100%";
+
+                document.querySelectorAll(".content").forEach(item => {
+                    item.classList.toggle("left");
+                })
+            })
+        })
+
+        $(".content .form button").on("click", ajax);
+
+        function ajax() {
+            chat.innerHTML = "";
+            $.ajax({
+                url: "http://127.0.0.1:5500/pages/chat.html",
+                success: function (data) {
+
+                    $(".chats").append(data);
+                },
+                error: function () {
+                    console.log("error");
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

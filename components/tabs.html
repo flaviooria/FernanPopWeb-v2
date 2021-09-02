@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    body {
+        font-family: sans-serif;
+        background: linear-gradient(45deg, #3949ab, #1e88e5);
+    }
+
+    .chats {
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .chats input {
+        display: none;
+    }
+
+    .chats input:checked+label {
+        background: #97c0d8;
+    }
+
+    .chats input#tab1:checked~.line {
+        left: 0%;
+    }
+
+    .chats input#tab1:checked~.content-chats #c1 {
+        opacity: 1;
+    }
+
+    .chats input#tab2:checked~.line {
+        left: 50%;
+    }
+
+    .chats input#tab2:checked~.content-chats #c2 {
+        opacity: 1;
+    }
+
+    .chats label {
+        display: inline-block;
+        font-size: 16px;
+        height: 36px;
+        line-height: 36px;
+        width: 50%;
+        text-align: center;
+        background: whitesmoke;
+        color: #313948;
+        position: relative;
+        transition: 0.25s background ease;
+        cursor: pointer;
+    }
+
+    .chats label::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        display: block;
+        background: #72adfa;
+        bottom: 0;
+        opacity: 0;
+        left: 0;
+        transition: 0.25s ease;
+    }
+
+    .chats label:hover::after {
+        opacity: 1;
+    }
+
+    .chats .line {
+        position: absolute;
+        height: 2px;
+        background: #3D5A80;
+        width: 50%;
+        top: 34px;
+        left: 0;
+        transition: 0.25s ease;
+    }
+
+    .chats .content-chats {
+        background: #e7e7e7;
+        position: relative;
+        height: 100px;
+        font-size: 16px;
+    }
+
+    .chats .content-chats .content {
+        position: absolute;
+        padding: 10px;
+        width: 100%;
+        top: 0;
+        opacity: 0;
+        transition: 0.25s ease;
+        color: #313948;
+    }
+
+    .chats .content-chats .content h3 {
+        font-weight: 200;
+        margin: 10px 0;
+    }
+
+    .chats .content-chats .content p {
+        margin: 10px 0;
+    }
+
+    .chats .content-chats .content p,
+    .chats .content-chats .content i {
+        font-size: 13px;
+    }
+</style>
+
+<body>
+    <div class="chats">
+        <input type="radio" id="tab1" name="tab" checked>
+        <label for="tab1"><i class="fa fa-code"></i> Features</label>
+        <input type="radio" id="tab2" name="tab">
+        <label for="tab2"><i class="fa fa-history"></i> History</label>
+        <div class="line"></div>
+        <div class="content-chats">
+            <div class="content" id="c1">
+                <h3>Features</h3>
+                <p>There really are a lot of features.</p>
+            </div>
+            <div class="content" id="c2">
+                <h3>History</h3>
+                <p>The project started in 2018 when someone needed something.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
