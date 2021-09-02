@@ -1,4 +1,6 @@
 .vscode
 ngrok.exe
 ngrok
-prepos.config
+prepros.config
+.DS_Store
+
